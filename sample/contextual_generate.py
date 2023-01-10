@@ -3,9 +3,9 @@ import tensorflow as tf
 import numpy as np
 import json
 
-from lm.modeling import GroverConfig, sample
-from sample.encoder import get_encoder, _tokenize_article_pieces, extract_generated_target
-from download_model import download_grover
+from grover.lm.modeling import GroverConfig, sample
+from grover.sample.encoder import get_encoder, _tokenize_article_pieces, extract_generated_target
+from grover.download_model import download_grover
 from tqdm import tqdm
 
 # currently can only process one document at a time in comparison to original implementation

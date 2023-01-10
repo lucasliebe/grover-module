@@ -20,8 +20,8 @@ import math
 import six
 import tensorflow as tf
 
-from generator.grover import optimization_adafactor
-from generator.grover.utils import get_assignment_map_from_checkpoint, get_shape_list, get_attention_mask, gelu, layer_norm, dropout, \
+from grover.sample import optimization_adafactor
+from grover.lm.utils import get_assignment_map_from_checkpoint, get_shape_list, get_attention_mask, gelu, layer_norm, dropout, \
     construct_scalar_host_call
 
 

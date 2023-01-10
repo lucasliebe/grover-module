@@ -20,6 +20,8 @@ Functionality copied from the [source repository](https://github.com/rowanz/grov
 * Code for the Grover discriminator in [discrimination/](discrimination/). Without much changing, you can run Grover as a discriminator to detect Neural Fake News.
 * Code for generating from a Grover model, in [sample/](sample/).
 
+Imports are adjusted to for this repository to work as a submodule. If you want to run this repository standalone you need to remove `grover.` from every import.
+
 ## Setting up your environment
 
 Use `pip install requirements.txt` to download the required packages.
