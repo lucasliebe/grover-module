@@ -14,7 +14,7 @@
 # limitations under the License.
 import re
 import tensorflow as tf
-from lm.utils import get_shape_list
+from generator.grover.utils import get_shape_list
 
 
 def create_optimizer(loss, init_lr, num_train_steps, num_warmup_steps, use_tpu):
@@ -85,7 +85,7 @@ def create_optimizer(loss, init_lr, num_train_steps, num_warmup_steps, use_tpu):
     return train_op, train_metrics
 
 
-class AdaFactorOptimizer(tf.train.Optimizer):
+class AdaFactorOptimizer(tf.compat.v1.train.Optimizer):
     """here's the optimizer we'll use"""
 
     def __init__(self,
