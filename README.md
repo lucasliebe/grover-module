@@ -22,8 +22,6 @@ Functionality copied from the [source repository](https://github.com/rowanz/grov
 
 ## Setting up your environment
 
-Please note that this repository currently does not support GPU acceleration since the package versions have been changed in comparison to the original project.
-
 Use `pip install requirements.txt` to download the required packages.
 Afterwards download the model using `python download_model.py base` or `large` or `mega`
 
