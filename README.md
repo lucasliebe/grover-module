@@ -1,11 +1,14 @@
  Grover
-##### UPDATE, Sept 17 2019. We got into NeurIPS (camera ready coming soon!) and we've made Grover-Mega publicly available without you needing to fill out the form. You can download it using [download_model.py](download_model.py).
+
+## General Information
+
+This Repository is a Fork of the Original Grover Project:
 
 (aka, code for [Defending Against Neural Fake News](https://arxiv.org/abs/1905.12616))
 
-Grover is a model for Neural Fake News -- both generation and detection. However, it probably can also be used for other generation tasks. 
+Grover is a model for Neural Fake News -- both generation and detection. However, it probably can also be used for other generation tasks.
 
-Visit the official project page at [rowanzellers.com/grover](https://rowanzellers.com/grover), [the AI2 online demo](https://grover.allenai.org), or read the full paper at [arxiv.org/abs/1905.12616](https://arxiv.org/abs/1905.12616). 
+Visit the original project page at [rowanzellers.com/grover](https://rowanzellers.com/grover), [the AI2 online demo](https://grover.allenai.org), or read the full paper at [arxiv.org/abs/1905.12616](https://arxiv.org/abs/1905.12616).
 
 ![teaser](https://i.imgur.com/VAGFpBe.png "teaser")
 
