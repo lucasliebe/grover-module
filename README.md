@@ -22,14 +22,9 @@ Functionality copied from the [source repository](https://github.com/rowanz/grov
 
 ## Setting up your environment
 
-There are a few ways you can run Grover according to the original repository:
-* **Generation mode (inference)**. This requires a GPU because I wasn't able to get top-p sampling, or caching of transformer hidden states, to work on a TPU.
-* **LM Validation mode (perplexity)**. This could be run on a GPU or a TPU, but I've only tested this with TPU inference.
-* **LM Training mode**. This requires a large TPU pod.
-* **Discrimination mode (training)**. This requires a TPU pod.
-* **Discrimination mode (inference)**. This could be run on a GPU or a TPU, but I've only tested this with TPU inference.
+Please note that this repository currently does not support GPU acceleration since the package versions have been changed in comparison to the original project.
 
-Use `pip install -r requirements-gpu.txt` if you're installing on a GPU, or `pip install requirements-tpu.txt` for TPU.
+Use `pip install requirements.txt` to download the required packages.
 Afterwards download the model using `python download_model.py base` or `large` or `mega`
 
 Misc notes/tips:
