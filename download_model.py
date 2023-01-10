@@ -10,9 +10,14 @@ parser.add_argument(
     type=str,
     help='Valid model names: (base|large|mega)',
 )
+parser.add_argument(
+    'model_dir',
+    type=str,
+    help='Please provide the full path to ModelDirectory',
+)
 model_type = parser.parse_args().model_type
 
-model_dir = os.path.join('models', model_type)
+model_dir = os.path.join(parser.parse_args().model_dir, "grover-" + model_type)
 if not os.path.exists(model_dir):
     os.makedirs(model_dir)
 
@@ -21,7 +26,7 @@ for ext in ['data-00000-of-00001', 'index', 'meta']:
     with open(os.path.join(model_dir, f'model.ckpt.{ext}'), 'wb') as f:
         file_size = int(r.headers["content-length"])
         if file_size < 1000:
-            raise ValueError("File doesn't exist? idk")
+            raise ValueError("File not available?")
         chunk_size = 1000
         for chunk in r.iter_content(chunk_size=chunk_size):
             f.write(chunk)
