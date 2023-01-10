@@ -1,18 +1,18 @@
-# Original Grover Code take from https://github.com/rowanz/grover
 import os
 import tensorflow as tf
 import numpy as np
 import json
 
 from lm.modeling import GroverConfig, sample
-from encoder import get_encoder, _tokenize_article_pieces, extract_generated_target
+from sample.encoder import get_encoder, _tokenize_article_pieces, extract_generated_target
 from tqdm import tqdm
 
-
-def generate_grover_news_from_original(doc, model, model_dir):
+# currently can only process one document at a time in comparison to original implementation
+def generate_grover_news_from_original(doc, model_type, model_dir):
     encoder = get_encoder()
-    grover_path = os.path.join(model_dir, "grover-" + model)
-    news_config = GroverConfig.from_json_file(os.path.join(grover_path, 'config.json'))
+    grover_path = os.path.join(model_dir, "grover-" + model_type)
+    news_config = GroverConfig.from_json_file(os.path.join(os.path.dirname(os.path.abspath(__file__)), "configs",
+                                                           model_type + ".json"))
 
     # We might have to split the batch into multiple chunks if the batch size is too large
     default_mbs = {12: 32, 24: 16, 48: 3}
