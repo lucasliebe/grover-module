@@ -5,12 +5,15 @@ import json
 
 from lm.modeling import GroverConfig, sample
 from sample.encoder import get_encoder, _tokenize_article_pieces, extract_generated_target
+from download_model import download_grover
 from tqdm import tqdm
 
 # currently can only process one document at a time in comparison to original implementation
 def generate_grover_news_from_original(doc, model_type, model_dir):
     encoder = get_encoder()
     grover_path = os.path.join(model_dir, "grover-" + model_type)
+    if not os.path.exists(grover_path):
+        download_grover(model_type, model_dir)
     news_config = GroverConfig.from_json_file(os.path.join(os.path.dirname(os.path.abspath(__file__)), "configs",
                                                            model_type + ".json"))
 
