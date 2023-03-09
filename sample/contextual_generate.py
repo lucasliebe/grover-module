@@ -10,6 +10,7 @@ from tqdm import tqdm
 
 # currently can only process one document at a time in comparison to original implementation
 def generate_grover_news_from_original(doc, model_type, model_dir):
+    print("Starting Grover Processing")
     encoder = get_encoder()
     grover_path = os.path.join(model_dir, "grover-" + model_type)
     if not os.path.exists(grover_path):
@@ -97,5 +98,5 @@ def generate_grover_news_from_original(doc, model_type, model_dir):
             # these were in there for whatever reason...
             article.pop('input_ids_conditional', None)
             article.pop('input_ids_unconditional', None)
-            print("Written {}/{} articles".format(i+1, len(articles)), flush=True)
+            print("Written {}/{} articles. Finished Grover".format(i+1, len(articles)), flush=True)
             return article["gens_article"][0]
