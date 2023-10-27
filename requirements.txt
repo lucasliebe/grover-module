@@ -1,10 +1,4 @@
-pandas
-regex==2021.8.3
-h5py
-numpy
 tensorboard==2.11
 tensorflow-gpu==2.11
-tqdm==4.31.1
-urllib3[secure,socks]
-urllib3
-requests
+regex
+tqdm
