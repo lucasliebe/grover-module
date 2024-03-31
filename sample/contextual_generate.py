@@ -3,10 +3,11 @@ import tensorflow as tf
 import numpy as np
 import json
 
-from grover.lm.modeling import GroverConfig, sample
-from grover.sample.encoder import get_encoder, _tokenize_article_pieces, extract_generated_target
-from grover.download_model import download_grover
+from lm.modeling import GroverConfig, sample
+from sample.encoder import get_encoder, _tokenize_article_pieces, extract_generated_target
+from download_model import download_grover
 from tqdm import tqdm
+
 
 # currently can only process one document at a time in comparison to original implementation
 def generate_grover_news_from_original(doc, model_type, model_dir):

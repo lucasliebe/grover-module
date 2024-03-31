@@ -1,5 +1,3 @@
- Grover
-
 ## General Information
 
 This Repository is a Fork of the Original Grover Project:
@@ -19,12 +17,11 @@ Functionality copied from the [source repository](https://github.com/rowanz/grov
 * Code for the Grover generator (in [lm/](sample/lm/)).
 * Code for generating from a Grover model, in [sample/](sample/).
 
-Imports are adjusted to for this repository to work as a submodule and does not support commandline execution anymore.
 
 ## Setting up your environment
 
 Use `pip install requirements.txt` to download the required packages.
-Afterwards download the model using `python download_model.py [base|large|mega] [download_path]`
+Afterward, download the model using `python download_model.py [base|large|mega] [download_path]`
 
 Misc notes/tips:
 * If you have a lot of projects on your machine, you might want to use an anaconda environment to handle them all. Use `conda create -n grover python=3.10.9` to create an environment named `grover`. To enter the environment use `source activate grover`. To leave use `source deactivate`.
